@@ -1,0 +1,92 @@
+.menu h1 {
+  color: #eee;
+}
+.menu__inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.menu--item {
+  width: 366px;
+  border-radius: 10px;
+  border: 5px solid;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.menu--item:hover {
+  transform: scale(1.02);
+  border: 5px solid #00c3ff;
+  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
+}
+.menu--item .item_up {
+  margin-bottom: 20px;
+  position: relative;
+}
+.menu--item .item_up img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.menu--item .item_up .title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  text-shadow: 0 0 2px #00c3ff, 0 0 4px #66dfff;
+  margin-top: 20px;
+}
+.menu--item .item_up .title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #00c3ff, #00e5ff, #00c3ff);
+  width: 50px;
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
+}
+.menu--item .item_up .price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0020c0;
+  color: #00e5ff;
+  font-size: 26px;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-shadow: 0 0 5px #00c3ff;
+}
+.menu--item .item_down {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.menu--item .item_down .description {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+  margin-top: 12px;
+  padding: 10px 10px;
+  overflow: visible;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 2px rgba(0, 195, 255, 0.3);
+  word-wrap: break-word;
+}/*# sourceMappingURL=menu.css.map */
