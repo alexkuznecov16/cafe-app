@@ -22,7 +22,10 @@
 .menu--item:hover {
   transform: scale(1.02);
   border: 5px solid #00c3ff;
-  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
+  box-shadow:
+    0 0 5px #00c3ff,
+    0 0 10px #00e5ff,
+    0 0 15px rgba(0, 195, 255, 0.4);
 }
 .menu--item .item_up {
   margin-bottom: 20px;
@@ -32,7 +35,7 @@
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .menu--item .item_up .title {
@@ -43,11 +46,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f0f0f0;
-  text-shadow: 0 0 2px #00c3ff, 0 0 4px #66dfff;
+  text-shadow:
+    0 0 2px #00c3ff,
+    0 0 4px #66dfff;
   margin-top: 20px;
 }
 .menu--item .item_up .title::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -56,7 +61,10 @@
   width: 50px;
   height: 4px;
   border-radius: 2px;
-  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
+  box-shadow:
+    0 0 5px #00c3ff,
+    0 0 10px #00e5ff,
+    0 0 15px rgba(0, 195, 255, 0.4);
 }
 .menu--item .item_up .price {
   position: absolute;
@@ -89,4 +97,4 @@
   text-overflow: ellipsis;
   text-shadow: 0 0 2px rgba(0, 195, 255, 0.3);
   word-wrap: break-word;
-}/*# sourceMappingURL=menu.css.map */
+} /*# sourceMappingURL=menu.css.map */

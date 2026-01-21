@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import { IoIosArrowUp } from 'react-icons/io';
-import "./ScrollToTopWidget.css"
+import './ScrollToTopWidget.css';
 import { useState, useEffect } from 'react';
 
 export default function ScrollToTopWidget() {
@@ -15,7 +15,7 @@ export default function ScrollToTopWidget() {
       }
 
       setShowButton(false);
-    }
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,13 +24,19 @@ export default function ScrollToTopWidget() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: 'smooth',
+    });
+  };
 
   return (
-    <button onClick={() => scrollToTop()} style={{display: showButton ? 'block' : 'none'}} type='button' title='Scroll to top' className="ScrollToTopWidget">
-      <IoIosArrowUp size={36}/>
+    <button
+      onClick={() => scrollToTop()}
+      style={{ display: showButton ? 'block' : 'none' }}
+      type="button"
+      title="Scroll to top"
+      className="ScrollToTopWidget"
+    >
+      <IoIosArrowUp size={36} />
     </button>
-  )
+  );
 }
