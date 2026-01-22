@@ -8,6 +8,7 @@ export default function Page() {
   const [written, setWritten] = useState({
     firstName: false,
     lastName: false,
+    phone: false,
   });
   const { register, handleSubmit } = useForm();
 
@@ -61,6 +62,21 @@ export default function Page() {
                 setWritten({
                   ...written,
                   lastName: e.target.value.length > 0,
+                })
+              }
+            />
+          </label>
+
+          <label>
+            Phone:
+            <input
+              className={written.phone ? 'correct' : ''}
+              type="text"
+              {...register('phone')}
+              onChange={(e) =>
+                setWritten({
+                  ...written,
+                  phone: e.target.value.length > 0,
                 })
               }
             />
