@@ -27,6 +27,11 @@
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
+@media screen and (max-width: 500px) {
+  .menu--item {
+    width: 250px;
+  }
+}
 .menu--item:hover {
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
@@ -34,10 +39,7 @@
   -o-transform: scale(1.02);
   transform: scale(1.02);
   border: 5px solid #00c3ff;
-  box-shadow:
-    0 0 5px #00c3ff,
-    0 0 10px #00e5ff,
-    0 0 15px rgba(0, 195, 255, 0.4);
+  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
 }
 .menu--item .item_up {
   margin-bottom: 20px;
@@ -51,19 +53,17 @@
 }
 .menu--item .item_up .title {
   text-align: center;
-  font-size: 30px;
+  font-size: clamp(20px, 2vw, 30px);
   font-weight: bold;
   position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f0f0f0;
-  text-shadow:
-    0 0 2px #00c3ff,
-    0 0 4px #66dfff;
+  text-shadow: 0 0 2px #00c3ff, 0 0 4px #66dfff;
   margin-top: 20px;
 }
 .menu--item .item_up .title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -72,10 +72,7 @@
   width: 50px;
   height: 4px;
   border-radius: 2px;
-  box-shadow:
-    0 0 5px #00c3ff,
-    0 0 10px #00e5ff,
-    0 0 15px rgba(0, 195, 255, 0.4);
+  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
 }
 .menu--item .item_up .price {
   position: absolute;
@@ -83,7 +80,7 @@
   right: 10px;
   background-color: #0020c0;
   color: #00e5ff;
-  font-size: 26px;
+  font-size: clamp(18px, 4vw, 26px);
   padding: 15px 20px;
   font-weight: bold;
   border-radius: 8px;
@@ -100,7 +97,7 @@
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  font-size: 16px;
+  font-size: clamp(10px, 3vw, 16px);
   color: #ccc;
   line-height: 1.5;
   margin-top: 12px;
@@ -126,13 +123,11 @@
   background: rgba(0, 0, 0, 0.05);
   position: relative;
   transition: all 0.3s ease;
-  box-shadow:
-    0 0 10px rgba(0, 195, 255, 0.3333333333),
-    0 0 20px rgba(0, 195, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.3333333333), 0 0 20px rgba(0, 195, 255, 0.2);
 }
 
 .watch-more-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -5px;
   left: -5px;
@@ -153,10 +148,7 @@
 .watch-more-btn:hover {
   color: #000;
   background: #00c3ff;
-  box-shadow:
-    0 0 20px #00c3ff,
-    0 0 40px rgba(0, 195, 255, 0.5333333333),
-    0 0 60px rgba(0, 195, 255, 0.3333333333);
+  box-shadow: 0 0 20px #00c3ff, 0 0 40px rgba(0, 195, 255, 0.5333333333), 0 0 60px rgba(0, 195, 255, 0.3333333333);
   transform: scale(1.05);
 }
 
