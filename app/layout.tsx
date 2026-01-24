@@ -3,6 +3,8 @@ import './globals.css';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import ScrollToTopWidget from './components/ScrollToTop/ScrollToTopWidget';
+import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar';
+import ReduxProvider from './provider';
 
 export const metadata: Metadata = {
   title: 'Cafe app',
@@ -17,12 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning>
-        <Header style={{ borderBottom: '1px solid #ee2' }} />
-        <main>
-          <div className="container">{children}</div>
-        </main>
-        <ScrollToTopWidget />
-        <Footer />
+        <ReduxProvider>
+          <ScrollProgressBar />
+          <Header />
+          <main>
+            <div className="container">{children}</div>
+          </main>
+          <ScrollToTopWidget />
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

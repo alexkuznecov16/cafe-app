@@ -2,24 +2,29 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 999999;
   background-color: #2e2e2e;
 }
 
-header nav a:after {
+header nav a::after {
   content: '';
   position: absolute;
+  z-index: 20;
   bottom: -5px;
   left: 50%;
-  transform: translateX(-50%);
   background-color: transparent;
   height: 2px;
   width: 100%;
-  -webkit-transition: 0.3 ease-out;
-  -moz-transition: 0.3 ease-out;
-  -ms-transition: 0.3 ease-out;
-  -o-transition: 0.3 ease-out;
-  transition: 0.3 ease-out;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 header nav a:hover::after {

@@ -22,7 +22,6 @@ export default function Header() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderTop: '1px solid rgb(0, 195, 255)',
         textAlign: 'center',
         color: '#fff',
         boxShadow: '0 10px 20px rgba(0, 195, 255, 0.5), 0 5px 10px rgba(0, 150, 255, 0.3)',
@@ -46,6 +45,9 @@ export default function Header() {
         </Link>
         <Link href="/booking" style={linkStyle}>
           Booking
+        </Link>
+        <Link href="/about" style={linkStyle}>
+          About
         </Link>
         <Link href="/contact" style={linkStyle}>
           Contact
