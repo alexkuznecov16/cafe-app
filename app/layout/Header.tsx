@@ -4,7 +4,6 @@ import './header.css';
 export default function Header() {
   const linkStyle: React.CSSProperties = {
     color: '#f0f0f0',
-    fontSize: '18px',
     fontWeight: 'bold',
     textDecoration: 'none',
     textTransform: 'uppercase',
