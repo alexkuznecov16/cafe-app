@@ -7,7 +7,7 @@ import Image from 'next/image';
 const vipGuests = [
   { name: 'Elon Musk', img: '/partners/musk.jpg' },
   { name: 'Gordon Ramsay', img: '/partners/ramsay.jpg' },
-  { name: 'Beyoncé', img: '/partners/beyonce.jpg' },
+  // { name: 'Beyoncé', img: '/partners/beyonce.jpg' },
   { name: 'Cristiano Ronaldo', img: '/partners/ronaldo.jpg' },
 ];
 
