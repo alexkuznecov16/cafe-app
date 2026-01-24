@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { cubicBezier, motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import './about.scss';
 import PageTitle from '../components/PageTitle/PageTitle';
@@ -12,7 +12,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { y: 30, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: [0.42, 0, 0.58, 1] } },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: cubicBezier(0.42, 0, 0.58, 1) } },
 };
 
 export default function AboutContent() {
@@ -20,7 +20,7 @@ export default function AboutContent() {
 
   const ySlow = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const yFast = useTransform(scrollYProgress, [0, 1], ['0%', '40%']);
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+  // const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   return (
     <>

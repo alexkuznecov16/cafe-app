@@ -1,20 +1,33 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import './booking.css';
 import { useState } from 'react';
 import PageTitle from '../components/PageTitle/PageTitle';
 
+type BookingFormData = {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  date: string;
+};
+
+type WrittenState = {
+  firstName: boolean;
+  lastName: boolean;
+  phone: boolean;
+};
+
 export default function Page() {
-  const [written, setWritten] = useState({
+  const [written, setWritten] = useState<WrittenState>({
     firstName: false,
     lastName: false,
     phone: false,
   });
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm<BookingFormData>();
 
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+  const onSubmit: SubmitHandler<BookingFormData> = (data) => {
+    alert(JSON.stringify(data, null, 2));
   };
 
   return (
@@ -27,7 +40,7 @@ export default function Page() {
             <input
               className={written.firstName ? 'correct' : ''}
               type="text"
-              {...register('firstName')}
+              {...register('firstName', { required: true })}
               onChange={(e) =>
                 setWritten({
                   ...written,
@@ -42,7 +55,7 @@ export default function Page() {
             <input
               className={written.lastName ? 'correct' : ''}
               type="text"
-              {...register('lastName')}
+              {...register('lastName', { required: true })}
               onChange={(e) =>
                 setWritten({
                   ...written,
@@ -56,8 +69,8 @@ export default function Page() {
             Phone:
             <input
               className={written.phone ? 'correct' : ''}
-              type="text"
-              {...register('phone')}
+              type="tel"
+              {...register('phone', { required: true })}
               onChange={(e) =>
                 setWritten({
                   ...written,
@@ -69,7 +82,7 @@ export default function Page() {
 
           <label>
             Date:
-            <input type="date" {...register('dateTime')} />
+            <input type="date" {...register('date', { required: true })} />
           </label>
 
           <input type="submit" value="Submit" />
