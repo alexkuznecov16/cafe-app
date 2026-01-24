@@ -34,7 +34,10 @@
   -o-transform: scale(1.02);
   transform: scale(1.02);
   border: 5px solid #00c3ff;
-  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
+  box-shadow:
+    0 0 5px #00c3ff,
+    0 0 10px #00e5ff,
+    0 0 15px rgba(0, 195, 255, 0.4);
 }
 .menu--item .item_up {
   margin-bottom: 20px;
@@ -54,11 +57,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f0f0f0;
-  text-shadow: 0 0 2px #00c3ff, 0 0 4px #66dfff;
+  text-shadow:
+    0 0 2px #00c3ff,
+    0 0 4px #66dfff;
   margin-top: 20px;
 }
 .menu--item .item_up .title::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -67,7 +72,10 @@
   width: 50px;
   height: 4px;
   border-radius: 2px;
-  box-shadow: 0 0 5px #00c3ff, 0 0 10px #00e5ff, 0 0 15px rgba(0, 195, 255, 0.4);
+  box-shadow:
+    0 0 5px #00c3ff,
+    0 0 10px #00e5ff,
+    0 0 15px rgba(0, 195, 255, 0.4);
 }
 .menu--item .item_up .price {
   position: absolute;
@@ -118,11 +126,13 @@
   background: rgba(0, 0, 0, 0.05);
   position: relative;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 195, 255, 0.3333333333), 0 0 20px rgba(0, 195, 255, 0.2);
+  box-shadow:
+    0 0 10px rgba(0, 195, 255, 0.3333333333),
+    0 0 20px rgba(0, 195, 255, 0.2);
 }
 
 .watch-more-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -5px;
   left: -5px;
@@ -143,7 +153,10 @@
 .watch-more-btn:hover {
   color: #000;
   background: #00c3ff;
-  box-shadow: 0 0 20px #00c3ff, 0 0 40px rgba(0, 195, 255, 0.5333333333), 0 0 60px rgba(0, 195, 255, 0.3333333333);
+  box-shadow:
+    0 0 20px #00c3ff,
+    0 0 40px rgba(0, 195, 255, 0.5333333333),
+    0 0 60px rgba(0, 195, 255, 0.3333333333);
   transform: scale(1.05);
 }
 

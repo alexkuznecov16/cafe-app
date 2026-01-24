@@ -11,7 +11,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: [0, 0, 0.58, 1] } },
 };
 
 export default function ContactContent() {

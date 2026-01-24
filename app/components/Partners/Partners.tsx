@@ -52,7 +52,7 @@ export default function Partners() {
               y: [0, -5, 0],
               boxShadow: ['0 0 0px #00c3ff', '0 0 20px #00c3ff', '0 0 0px #00c3ff'],
             }}
-            transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+            transition={{ repeat: Infinity, duration: 3, ease: [0.42, 0, 0.58, 1] }}
           >
             <Image src={brand.logo} alt={brand.name} width={150} height={150} />
             <span>{brand.name}</span>

@@ -12,7 +12,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { y: 30, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: [0.42, 0, 0.58, 1] } },
 };
 
 export default function AboutContent() {
@@ -33,16 +33,23 @@ export default function AboutContent() {
       {/* Page title */}
       <PageTitle title="About" />
 
-      <motion.section className="about" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.section
+        className="about"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Our Story */}
         <motion.div className="about__card wide" variants={itemVariants}>
           <span className="icon">🔥</span>
           <h2>Our Story</h2>
           <p>
-            Our restaurant was born from a simple idea — to combine bold flavors, honest ingredients, and unforgettable atmosphere.
+            Our restaurant was born from a simple idea — to combine bold flavors, honest
+            ingredients, and unforgettable atmosphere.
           </p>
           <p>
-            Since <span>2012</span>, we’ve been creating not just food, but emotions. Every dish tells a story of passion, fire, and craft.
+            Since <span>2012</span>, we’ve been creating not just food, but emotions. Every dish
+            tells a story of passion, fire, and craft.
           </p>
         </motion.div>
 
@@ -71,7 +78,9 @@ export default function AboutContent() {
           <span className="icon">🧠</span>
           <h2>Philosophy</h2>
           <p>We believe food should surprise, inspire and bring people together.</p>
-          <p>No compromises. No shortcuts. Only fresh ingredients, live fire and creative energy.</p>
+          <p>
+            No compromises. No shortcuts. Only fresh ingredients, live fire and creative energy.
+          </p>
         </motion.div>
 
         {/* Atmosphere */}
@@ -135,11 +144,21 @@ export default function AboutContent() {
         <motion.div className="about__why" variants={containerVariants}>
           <motion.h2 variants={itemVariants}>Why Guests Choose Us</motion.h2>
           <div className="why__grid">
-            <motion.div className="why__item" variants={itemVariants}>🔥 Live fire cooking</motion.div>
-            <motion.div className="why__item" variants={itemVariants}>🌿 Fresh local ingredients</motion.div>
-            <motion.div className="why__item" variants={itemVariants}>🎶 Night atmosphere</motion.div>
-            <motion.div className="why__item" variants={itemVariants}>🍸 Signature cocktails</motion.div>
-            <motion.div className="why__item" variants={itemVariants}>❤️ Soul & passion</motion.div>
+            <motion.div className="why__item" variants={itemVariants}>
+              🔥 Live fire cooking
+            </motion.div>
+            <motion.div className="why__item" variants={itemVariants}>
+              🌿 Fresh local ingredients
+            </motion.div>
+            <motion.div className="why__item" variants={itemVariants}>
+              🎶 Night atmosphere
+            </motion.div>
+            <motion.div className="why__item" variants={itemVariants}>
+              🍸 Signature cocktails
+            </motion.div>
+            <motion.div className="why__item" variants={itemVariants}>
+              ❤️ Soul & passion
+            </motion.div>
           </div>
         </motion.div>
 
