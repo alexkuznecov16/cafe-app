@@ -36,7 +36,34 @@ export default function ContactContent() {
               <strong>Email:</strong> <a href="mailto:info@restaurant.com">info@restaurant.com</a>
             </p>
           </motion.div>
-          {/* остальные карточки */}
+          <motion.div className="contact__card" variants={itemVariants}>
+            <div className="card-icon">📍</div>
+            <h2>Visit Us</h2>
+            <p>123 Main St, YourCity, YourCountry</p>
+          </motion.div>
+
+          <motion.div className="contact__card" variants={itemVariants}>
+            <div className="card-icon">🕒</div>
+            <h2>Opening Hours</h2>
+            <p>
+              <span>Restaurant:</span> Mon–Sun, 10:00 – 23:00
+            </p>
+            <p>
+              <span>Support:</span> Mon–Fri, 09:00 – 18:00
+            </p>
+          </motion.div>
+          <motion.div className="contact__card" variants={itemVariants}>
+            <div className="card-icon">🌐</div>
+            <h2>Social Media</h2>
+            <div className="contact__social">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                Instagram
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                Facebook
+              </a>
+            </div>
+          </motion.div>
         </div>
         <motion.div
           className="contact__map"
