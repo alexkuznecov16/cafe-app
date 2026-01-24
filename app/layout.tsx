@@ -7,8 +7,9 @@ import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar'
 import ReduxProvider from './provider';
 
 export const metadata: Metadata = {
-  title: 'Cafe app',
-  description: 'Made by Alexander Kuznecov',
+  title: 'Neon Restaurant: The Best Place to Eat in the USA',
+  description:
+    'Neon Restaurant — a futuristic dining experience serving signature fire-grilled dishes, fresh local ingredients, and crafted cocktails. Join thousands of happy guests and enjoy unforgettable nights in the heart of the city.',
 };
 
 export default function RootLayout({

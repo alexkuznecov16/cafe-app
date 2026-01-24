@@ -125,6 +125,7 @@
 }
 
 .watch-more-btn {
+  margin-bottom: 50px;
   display: inline-block;
   padding: 16px 40px;
   font-size: 20px;
@@ -138,13 +139,18 @@
   background: rgba(0, 0, 0, 0.05);
   position: relative;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #00c3ff55, 0 0 20px #00c3ff33;
+  box-shadow:
+    0 0 10px #00c3ff55,
+    0 0 20px #00c3ff33;
 }
 
 .watch-more-btn::before {
   content: '';
   position: absolute;
-  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
   border-radius: 50px;
   background: linear-gradient(45deg, #00c3ff, #ff00ff, #00ff99, #ffdd00);
   filter: blur(15px);
@@ -160,7 +166,10 @@
 .watch-more-btn:hover {
   color: #000;
   background: #00c3ff;
-  box-shadow: 0 0 20px #00c3ff, 0 0 40px #00c3ff88, 0 0 60px #00c3ff55;
+  box-shadow:
+    0 0 20px #00c3ff,
+    0 0 40px #00c3ff88,
+    0 0 60px #00c3ff55;
   transform: scale(1.05);
 }
 

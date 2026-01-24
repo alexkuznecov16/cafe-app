@@ -2,7 +2,6 @@
 
 import { useRef, useState } from 'react';
 import './home.css';
-import Menu from './menu/page';
 import Link from 'next/link';
 import About from './about/page';
 import Partners from './components/Partners/Partners';

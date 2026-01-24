@@ -15,7 +15,7 @@ export default function Footer() {
         backgroundColor: '#2e2e2e',
       }}
     >
-      <p>© {new Date().getFullYear()} Cafe App</p>
+      <p>&copy; {new Date().getFullYear()} Neon Restaurant</p>
     </footer>
   );
 }
