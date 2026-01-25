@@ -31,6 +31,14 @@ $glass: rgba(255, 255, 255, 0.06);
   overflow: hidden;
   transition: 0.4s ease;
 
+  &.stacked {
+  grid-column: span 2;
+
+  @media (max-width: 900px) {
+    grid-column: span 2; // на планшетах и мобилках тоже
+  }
+}
+
   &.wide {
     grid-column: span 2;
   }

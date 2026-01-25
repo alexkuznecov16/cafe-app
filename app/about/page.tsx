@@ -74,7 +74,7 @@ export default function AboutContent() {
         </motion.div>
 
         {/* Philosophy */}
-        <motion.div className="about__card" variants={itemVariants}>
+        <motion.div className="about__card stacked" variants={itemVariants}>
           <span className="icon">🧠</span>
           <h2>Philosophy</h2>
           <p>We believe food should surprise, inspire and bring people together.</p>
@@ -84,7 +84,7 @@ export default function AboutContent() {
         </motion.div>
 
         {/* Atmosphere */}
-        <motion.div className="about__card" variants={itemVariants}>
+        <motion.div className="about__card stacked" variants={itemVariants}>
           <span className="icon">🎶</span>
           <h2>Atmosphere</h2>
           <p>Neon lights, deep beats, open kitchen, and the smell of fire.</p>
