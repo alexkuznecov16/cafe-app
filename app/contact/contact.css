@@ -33,6 +33,7 @@
 
 .contact__card {
   background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
@@ -128,4 +129,4 @@
   height: 100%;
   filter: grayscale(1) invert(0.9) contrast(1.2);
   border: none;
-}
+} /*# sourceMappingURL=contact.css.map */

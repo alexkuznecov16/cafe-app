@@ -17,6 +17,7 @@
   border: 2px solid rgba(0, 195, 255, 0.2);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: 0.3s ease-out;
 }
@@ -53,7 +54,6 @@
   box-shadow:
     0 0 5px rgba(0, 255, 136, 0.4),
     0 0 12px rgba(0, 255, 136, 0.2);
-  -webkit-animation: correctGlow 0.4s ease-out;
   animation: correctGlow 0.4s ease-out;
 }
 .form__inner form input.correct:focus {
@@ -61,6 +61,9 @@
   box-shadow:
     0 0 8px rgba(0, 255, 136, 0.7),
     0 0 16px rgba(0, 255, 136, 0.4);
+}
+.form__inner form input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
 }
 .form__inner form input::placeholder {
   color: rgba(255, 255, 255, 0.3);
@@ -75,6 +78,7 @@
   width: 20px;
   height: 20px;
   filter: drop-shadow(0 0 5px #00c3ff);
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .form__inner form input[type='date']::-webkit-calendar-picker-indicator:hover {
@@ -120,6 +124,4 @@
       0 0 5px rgba(0, 255, 136, 0.4),
       0 0 12px rgba(0, 255, 136, 0.2);
   }
-}
-
-/*# sourceMappingURL=booking.css.map */
+} /*# sourceMappingURL=booking.css.map */

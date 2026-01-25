@@ -2,35 +2,89 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 9999;
   background-color: #2e2e2e;
+  padding: 20px 0;
+  box-shadow:
+    0 10px 20px rgba(0, 195, 255, 0.5),
+    0 5px 10px rgba(0, 150, 255, 0.3);
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+header nav .nav-links {
+  display: flex;
+  gap: 36px;
+  transition: all 0.3s ease;
 }
 
 header nav a {
-  font-size: clamp(6px, 2vw, 18px);
+  position: relative;
+  color: #f0f0f0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 5px #00c3ff,
+    0 0 10px #66dfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-header nav a::after {
-  content: '';
-  position: absolute;
-  z-index: 20;
-  bottom: -5px;
-  left: 50%;
-  background-color: transparent;
-  height: 2px;
+header nav a:hover {
+  color: #00e5ff;
+}
+
+/* Burger menu */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
   width: 100%;
-  -webkit-transition: 0.3s ease-out;
-  -moz-transition: 0.3s ease-out;
-  -ms-transition: 0.3s ease-out;
-  -o-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+  background-color: #f0f0f0;
+  border-radius: 2px;
+  transition: none;
 }
 
-header nav a:hover::after {
-  background-color: #00e5ff;
+@media (max-width: 700px) {
+  header nav {
+    justify-content: space-between;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  header nav .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(46, 46, 46, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: right 0.4s ease;
+  }
+
+  header nav.open .nav-links {
+    right: 0;
+  }
 }

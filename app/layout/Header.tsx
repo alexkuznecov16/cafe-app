@@ -1,7 +1,24 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import './header.css';
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isOpen) {
+      html.style.setProperty('overflow', 'hidden');
+    } else {
+      html.style.setProperty('overflow', '');
+    }
+    return () => {
+      html.style.setProperty('overflow', '');
+    };
+  }, [isOpen]);
+
   const linkStyle: React.CSSProperties = {
     color: '#f0f0f0',
     fontWeight: 'bold',
@@ -9,48 +26,34 @@ export default function Header() {
     textTransform: 'uppercase',
     letterSpacing: '2px',
     textShadow: '0 0 5px #00c3ff, 0 0 10px #66dfff',
-    transition: 'all 0.3s ease',
     position: 'relative',
   };
 
   return (
-    <header
-      style={{
-        padding: '30px 0px',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        color: '#fff',
-        boxShadow: '0 10px 20px rgba(0, 195, 255, 0.5), 0 5px 10px rgba(0, 150, 255, 0.3)',
-      }}
-    >
-      <nav
-        style={{
-          display: 'flex',
-          gap: '36px',
-          margin: '0 auto',
-          width: '100%',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Link href="/" style={linkStyle}>
-          Home
-        </Link>
-        <Link href="/menu" style={linkStyle}>
-          Menu
-        </Link>
-        <Link href="/booking" style={linkStyle}>
-          Booking
-        </Link>
-        <Link href="/about" style={linkStyle}>
-          About
-        </Link>
-        <Link href="/contact" style={linkStyle}>
-          Contact
-        </Link>
+    <header>
+      <nav className={isOpen ? 'open' : ''}>
+        <div className="burger" onClick={() => setIsOpen(!isOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className="nav-links">
+          <Link onClick={() => setIsOpen(false)} href="/" style={linkStyle}>
+            Home
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="/menu" style={linkStyle}>
+            Menu
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="/booking" style={linkStyle}>
+            Booking
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="/about" style={linkStyle}>
+            About
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="/contact" style={linkStyle}>
+            Contact
+          </Link>
+        </div>
       </nav>
     </header>
   );
