@@ -1,44 +1,109 @@
 header {
   position: sticky;
   top: 0;
-  left: 0;
+  width: 100%;
   z-index: 9999;
-  background-color: #2e2e2e;
-  padding: 20px 0;
-  box-shadow:
-    0 10px 20px rgba(0, 195, 255, 0.5),
-    0 5px 10px rgba(0, 150, 255, 0.3);
+  background-color: #1a1a1a; /* Сделал чуть темнее для контраста с неоном */
+  padding: 15px 0;
 }
 
+/* Светодиодная лента внизу */
+header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00c3ff, #66dfff, #00c3ff, transparent);
+  box-shadow: 0 0 15px #00c3ff;
+  animation: neon-flow 3s infinite linear;
+}
+
+/* Центрируем содержимое nav */
 header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  position: relative;
+  width: 100%;
 }
 
+/* Контейнер со всеми ссылками и логотипом */
 header nav .nav-links {
   display: flex;
-  gap: 36px;
-  transition: all 0.3s ease;
+  align-items: center;
+  gap: 40px; /* Расстояние между элементами */
 }
 
-header nav a {
-  position: relative;
+/* Стили логотипа внутри меню */
+.logo {
+  margin-right: 20px; /* Небольшой доп. отступ от ссылок */
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00c3ff;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #00c3ff;
+}
+
+/* Стили ссылок */
+.nav-item {
   color: #f0f0f0;
   font-weight: bold;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow:
-    0 0 5px #00c3ff,
-    0 0 10px #66dfff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  text-shadow: 0 0 5px #00c3ff;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
-header nav a:hover {
+.nav-item:hover {
   color: #00e5ff;
+  text-shadow: 0 0 15px #00c3ff;
+  transform: translateY(-2px);
+}
+
+/* Мобильная версия */
+@media (max-width: 850px) {
+  header nav {
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  header nav .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.4s ease;
+  }
+
+  header nav.open .nav-links {
+    right: 0;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 20px; /* В мобильном меню лого будет сверху */
+  }
 }
 
 /* Burger menu */
@@ -58,10 +123,18 @@ header nav a:hover {
   width: 100%;
   background-color: #f0f0f0;
   border-radius: 2px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
   transition: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
+  .header-right {
+    display: none;
+  }
+
   header nav {
     justify-content: space-between;
   }
@@ -86,5 +159,12 @@ header nav a:hover {
 
   header nav.open .nav-links {
     right: 0;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .logo, .header-right {
+    display: block;
   }
 }

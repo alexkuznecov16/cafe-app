@@ -30,29 +30,30 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="cyber-header">
       <nav className={isOpen ? 'open' : ''}>
         <div className="burger" onClick={() => setIsOpen(!isOpen)}>
           <span></span>
           <span></span>
           <span></span>
         </div>
+        
+        {/* Все элементы в одном контейнере для центровки */}
         <div className="nav-links">
-          <Link onClick={() => setIsOpen(false)} href="/" style={linkStyle}>
-            Home
-          </Link>
-          <Link onClick={() => setIsOpen(false)} href="/menu" style={linkStyle}>
-            Menu
-          </Link>
-          <Link onClick={() => setIsOpen(false)} href="/booking" style={linkStyle}>
-            Booking
-          </Link>
-          <Link onClick={() => setIsOpen(false)} href="/about" style={linkStyle}>
-            About
-          </Link>
-          <Link onClick={() => setIsOpen(false)} href="/contact" style={linkStyle}>
-            Contact
-          </Link>
+          <div className="logo">
+            <Link href="/">NEON<span>RESTAURANT</span></Link>
+          </div>
+
+          {['Home', 'Menu', 'Booking', 'About', 'Contact'].map((item) => (
+            <Link 
+              key={item} 
+              onClick={() => setIsOpen(false)} 
+              href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+              className="nav-item"
+            >
+              {item}
+            </Link>
+          ))}
         </div>
       </nav>
     </header>
