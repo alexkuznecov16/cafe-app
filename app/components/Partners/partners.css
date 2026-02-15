@@ -56,9 +56,9 @@
 
 .partners__slider-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Чтобы карточки переносились на маленьких экранах */
-  justify-content: center; /* Центрируем карточки */
-  gap: 25px; /* Расстояние между карточками */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
   padding: 40px 20px;
 }
 

@@ -3,11 +3,10 @@ header {
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #1a1a1a; /* Сделал чуть темнее для контраста с неоном */
+  background-color: #1a1a1a;
   padding: 15px 0;
 }
 
-/* Светодиодная лента внизу */
 header::before {
   content: '';
   position: absolute;
@@ -20,7 +19,6 @@ header::before {
   animation: neon-flow 3s infinite linear;
 }
 
-/* Центрируем содержимое nav */
 header nav {
   display: flex;
   justify-content: center;
@@ -28,16 +26,14 @@ header nav {
   width: 100%;
 }
 
-/* Контейнер со всеми ссылками и логотипом */
 header nav .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px; /* Расстояние между элементами */
+  gap: 40px;
 }
 
-/* Стили логотипа внутри меню */
 .logo {
-  margin-right: 20px; /* Небольшой доп. отступ от ссылок */
+  margin-right: 20px;
 }
 
 .logo a {
@@ -54,7 +50,6 @@ header nav .nav-links {
   color: #00c3ff;
 }
 
-/* Стили ссылок */
 .nav-item {
   color: #f0f0f0;
   font-weight: bold;
@@ -72,7 +67,6 @@ header nav .nav-links {
   transform: translateY(-2px);
 }
 
-/* Мобильная версия */
 @media (max-width: 850px) {
   header nav {
     justify-content: space-between;
@@ -102,11 +96,10 @@ header nav .nav-links {
 
   .logo {
     margin-right: 0;
-    margin-bottom: 20px; /* В мобильном меню лого будет сверху */
+    margin-bottom: 20px;
   }
 }
 
-/* Burger menu */
 .burger {
   display: none;
   flex-direction: column;
@@ -162,9 +155,9 @@ header nav .nav-links {
   }
 }
 
-/* Адаптив */
 @media (max-width: 900px) {
-  .logo, .header-right {
+  .logo,
+  .header-right {
     display: block;
   }
 }

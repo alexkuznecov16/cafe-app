@@ -52,7 +52,7 @@
 .contact__card {
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 25px;
   border-radius: 20px;
   border: 1px solid rgba(0, 195, 255, 0.1);
@@ -61,7 +61,7 @@
   overflow: hidden;
 }
 .contact__card::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -174,4 +174,4 @@
   height: 100%;
   filter: grayscale(1) invert(0.9) contrast(1.2);
   border: none;
-}/*# sourceMappingURL=contact.css.map */
+} /*# sourceMappingURL=contact.css.map */

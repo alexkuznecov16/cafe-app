@@ -37,17 +37,18 @@ export default function Header() {
           <span></span>
           <span></span>
         </div>
-        
-        {/* Все элементы в одном контейнере для центровки */}
+
         <div className="nav-links">
           <div className="logo">
-            <Link href="/">NEON<span>RESTAURANT</span></Link>
+            <Link href="/">
+              NEON<span>RESTAURANT</span>
+            </Link>
           </div>
 
           {['Home', 'Menu', 'Booking', 'About', 'Contact'].map((item) => (
-            <Link 
-              key={item} 
-              onClick={() => setIsOpen(false)} 
+            <Link
+              key={item}
+              onClick={() => setIsOpen(false)}
               href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
               className="nav-item"
             >
